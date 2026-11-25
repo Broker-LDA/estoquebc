@@ -1,0 +1,6 @@
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(tw);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(tw);
+/* Mantém o breakpoint dos cards da operação: 1.250 px. */
+@theme { --breakpoint-wide: 78.125rem; }
+@source "../app/templates";

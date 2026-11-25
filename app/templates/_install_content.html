@@ -1,0 +1,12 @@
+<div class="page-heading"><div><div class="eyebrow">BRASIL CACAU · APLICATIVO</div><h1>Estoque sempre à mão.</h1><p>Adicione à tela inicial para abrir o sistema em uma janela própria, com seu login de sempre.</p></div></div>
+<section class="panel install-hero">
+  <img src="{{ url_for('static', filename='img/pwa-192.png') }}" alt="Brasil Cacau" width="76" height="76">
+  <div><h2>Brasil Cacau · Estoque</h2><p>Produtos, lotes e conferências no celular ou computador.</p><p class="subtle" id="pwa-install-status" role="status">Use as instruções abaixo. O botão de instalação aparece quando o navegador o disponibilizar.</p>
+  <button class="btn primary" type="button" id="pwa-install-button" hidden>Instalar aplicativo</button></div>
+</section>
+<div class="install-grid tw:grid tw:grid-cols-1 tw:wide:grid-cols-2">
+  <section class="panel"><span class="pill">Android / computador</span><h2>Chrome ou Edge</h2><ol><li>Abra este endereço no navegador.</li><li>No menu, escolha <strong>Instalar aplicativo</strong> ou <strong>Adicionar à tela inicial</strong>.</li><li>Confirme e use o ícone criado no aparelho.</li></ol><p class="subtle">No computador, a opção também pode aparecer na barra de endereços. Os nomes variam conforme o navegador.</p></section>
+  <section class="panel"><span class="pill">iPhone / iPad</span><h2>Safari</h2><ol><li>Abra este endereço no Safari.</li><li>Toque em <strong>Compartilhar</strong>.</li><li>Selecione <strong>Adicionar à Tela de Início</strong> e confirme.</li></ol><p class="subtle">O ícone abrirá o sistema como aplicativo. A instalação não cria uma nova conta.</p></section>
+</div>
+<div class="hint">O estoque precisa de conexão com a internet. Instalar o aplicativo não libera consultas ou movimentações offline. Alterações de contagem ainda não enviadas continuam protegidas pelo rascunho deste aparelho.</div>
+<a class="btn secondary" href="{{ url_for('main.dashboard') if current_user.is_authenticated else url_for('main.login') }}">{{ 'Voltar à visão geral' if current_user.is_authenticated else 'Ir para o login' }} →</a>

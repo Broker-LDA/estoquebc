@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.db
+instance/
+
+frontend/node_modules/
+
+.env.*
+!.env.example
+!.env.production.example
+*.dump
+*.backup
+*.log

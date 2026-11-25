@@ -1,0 +1,14 @@
+{
+  "name": "cacau-ui",
+  "private": true,
+  "version": "2.1.0",
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ../app/static/css/ui-utilities.css --minify",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "tailwindcss": "4.3.5",
+    "@tailwindcss/cli": "4.3.5",
+    "jsdom": "26.1.0"
+  }
+}
